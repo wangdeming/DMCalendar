@@ -29,5 +29,4 @@
 
     //图片展示
 
-
-    ![](https://github.com/wangdeming/DMCalendar/blob/master/DMCalendar.tiff)
+    ![示例图片](https://github.com/wangdeming/DMCalendar/blob/master/DMCalendar.tiff)
