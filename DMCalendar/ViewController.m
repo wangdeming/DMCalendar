@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DMCalendarView.h"
 
 @interface ViewController ()
 
@@ -16,13 +17,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    DMCalendarView *calendarView = [[DMCalendarView alloc]initWithFrame:CGRectMake(15, 74, [UIScreen mainScreen].bounds.size.width-20, 300)];
+    
+    //设置已经签到的天数日期
+    NSMutableArray* _signArray = [[NSMutableArray alloc] init];
+    [_signArray addObject:[NSNumber numberWithInt:1]];
+    [_signArray addObject:[NSNumber numberWithInt:5]];
+    [_signArray addObject:[NSNumber numberWithInt:9]];
+    calendarView.signArray = _signArray;
+    
+    calendarView.date=[NSDate date];
+    
+    [calendarView addButtonAction:^(id sender) {
+        
+        
+        
+    }];
+    
+    [self.view addSubview:calendarView];
+    
 }
 
 
